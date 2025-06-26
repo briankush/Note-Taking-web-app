@@ -4,7 +4,7 @@ const PORT= 3000
 const app = express();
 
 // routes
-app.get('/', (req, res) => {
+app.get('/api/notes', (req, res) => {
     res.send('Hello World!')
 });
 
