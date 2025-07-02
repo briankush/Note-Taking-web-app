@@ -15,3 +15,6 @@ const noteSchema= new mongoose.Schema({
 );
 
 // create a model based off the schema
+const Note = mongoose.model("Note", noteschema)
+
+module.exports= { Note };
