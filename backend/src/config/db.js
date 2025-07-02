@@ -2,13 +2,11 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
     try {
-        await mongoose.connect("mongodb://localhost:27017/noteapp", {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
+        await mongoose.connect(process.env.MONGO_URI);
         console.log("connected successfully");
     } catch (error) {
         console.error("Connection Error", error);
+        process.exit(1);
     }
 };
 
