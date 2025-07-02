@@ -2,8 +2,8 @@ const express = require('express');
 const notesRoutes = require('./routes/noteRoutes');
 const { connectDB } = require('./config/db');
 const dotenv = require('dotenv');
-const PORT = 3000;
-
+const PORT =  process.env.PORT || 3000;
+// use dotenv
 dotenv.config();
 
 const app = express();
