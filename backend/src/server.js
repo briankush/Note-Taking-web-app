@@ -1,11 +1,15 @@
-const express = require('express');
+const express = require('express')
+import notesRoutes from "./routes/noteRoutes.js"
+import { connectDB } from "./config/db.js"
 const PORT= 3000
 
 const app = express();
 
+// connectDB();
+
 // routes
 app.get('/api/notes', (req, res) => {
-    res.send('Hello World!')
+    res.send('Notes page!')
 });
 
 app.listen(PORT, () =>{
