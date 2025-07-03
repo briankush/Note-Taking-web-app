@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // create a schema
-const noteSchema= new mongoose.Schema({
+const noteSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
@@ -15,6 +15,6 @@ const noteSchema= new mongoose.Schema({
 );
 
 // create a model based off the schema
-const Note = mongoose.model("Note", noteschema)
+const Note = mongoose.model("Note", noteSchema)
 
-module.exports= { Note };
+module.exports=  Note ;

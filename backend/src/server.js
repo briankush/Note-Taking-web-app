@@ -1,5 +1,5 @@
 const express = require('express');
-const notesRoutes = require('./routes/noteRoutes');
+const notesRoutes = require('./routes/notesRoutes.js');
 const { connectDB } = require('./config/db');
 const dotenv = require('dotenv');
 const PORT =  process.env.PORT || 3000;
@@ -11,9 +11,7 @@ const app = express();
 connectDB();
 
 // routes
-app.get('/api/notes', (req, res) => {
-    res.send('Notes page!');
-});
+app.use("/api/notes", notesRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

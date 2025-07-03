@@ -11,7 +11,7 @@ router.put("/:id", updateNote);
 
 router.delete("/:id", deleteNote);
 
-module.exports = express.Router;
+module.exports = router;
 
 // app.get('/api/notes', (req, res) => {
 //     res.send('Hello World!')
